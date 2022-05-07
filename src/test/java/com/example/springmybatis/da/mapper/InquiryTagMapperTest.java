@@ -16,7 +16,7 @@ class InquiryTagMapperTest {
 
     @Test
     void find() {
-        // TODO ハンズオン 1-4 コメントアウトを解除してテストを実行
+        // ハンズオン 1-4 コメントアウトを解除してテストを実行
         var inquiryTag = inquiryTagMapper.find(1);
 
         assertNotNull(inquiryTag);
