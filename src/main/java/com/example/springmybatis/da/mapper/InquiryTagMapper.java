@@ -2,6 +2,7 @@ package com.example.springmybatis.da.mapper;
 
 import java.util.List;
 
+import com.example.springmybatis.da.entity.InquiryTagView;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Repository;
@@ -30,8 +31,10 @@ public interface InquiryTagMapper {
     void delete(int id);
 
      // TODO ハンズオン 4-1 findViewメソッドを定義
+    InquiryTagView findView(int id);
 
     // TODO ハンズオン 4-5 findView2メソッドを定義
+    InquiryTagView findView2(int id);
 
 
 }
