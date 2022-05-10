@@ -52,7 +52,7 @@ class InquiryTagMapperTest {
 
 	@Test
     void insertUpdateDelete() {
-        // TODO ハンズオン 3-3 コメントアウトを解除してテストを実行
+        // ハンズオン 3-3 コメントアウトを解除してテストを実行
         var inquiryTag = new InquiryTag();
         inquiryTag.setInquiryId(1);
         inquiryTag.setDescription("保存");

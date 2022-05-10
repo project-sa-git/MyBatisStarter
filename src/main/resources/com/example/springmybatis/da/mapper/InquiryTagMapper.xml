@@ -16,7 +16,7 @@
         ORDER BY #{xxx} #{asde}
     </select>
 
-    <!-- TODO ハンズオン 4-2 resultMapタグを定義 -->
+    <!-- ハンズオン 4-2 resultMapタグを定義 -->
     <resultMap id="View_Result_Map" type="com.example.springmybatis.da.entity.InquiryTagView" extends="Base_Result_Map">
         <!--property-> 継承したいクラス-->
         <association property="inquiry"
@@ -26,7 +26,7 @@
     </resultMap>
 
 
-    <!-- TODO ハンズオン 4-6 resultMapタグを定義 -->
+    <!-- ハンズオン 4-6 resultMapタグを定義 -->
     <resultMap id="View2_Result_Map" type="com.example.springmybatis.da.entity.InquiryTagView" extends="Base_Result_Map">
         <association property="inquiry"
                      resultMap="com.example.springmybatis.da.mapper.InquiryMapper.Base_Result_Map"
@@ -74,14 +74,14 @@
     </select>
 
 
-    <!-- TODO ハンズオン 3-2-1 insertタグを定義 -->
+    <!-- ハンズオン 3-2-1 insertタグを定義 -->
     <insert id="insert" parameterType="com.example.springmybatis.da.entity.InquiryTag" keyProperty="id" useGeneratedKeys="true">
         INSERT INTO inquiry_tag(inquiry_id, description, created)
         VALUES (#{inquiryId}, #{description}, #{created})
     </insert>
 
 
-    <!-- TODO ハンズオン 3-2-2 updateタグを定義 -->
+    <!-- ハンズオン 3-2-2 updateタグを定義 -->
     <!--更新のため、keyPropertyの記載は不要。setタグで記載（最後のカンマ「,」を自動で消してくれる）-->
     <update id="update" parameterType="com.example.springmybatis.da.entity.InquiryTag">
         UPDATE inquiry_tag
@@ -95,14 +95,14 @@
     </update>
 
 
-    <!-- TODO ハンズオン 3-2-3 deleteタグを定義 -->
+    <!-- ハンズオン 3-2-3 deleteタグを定義 -->
     <delete id="delete" parameterType="int">
         delete from inquiry_tag
         WHERE id = #{id}
     </delete>
 
 
-    <!-- TODO ハンズオン 4-3 selectタグを定義 -->
+    <!-- ハンズオン 4-3 selectタグを定義 -->
     <select id="findView" parameterType="int" resultMap="View_Result_Map">
         SELECT
             id, inquiry_id, description, created
@@ -113,7 +113,7 @@
     </select>
 
 
-    <!-- TODO ハンズオン 4-7 selectタグを定義 -->
+    <!-- ハンズオン 4-7 selectタグを定義 -->
     <select id="findView2" parameterType="int" resultMap="View2_Result_Map">
         SELECT
         t.id, t.inquiry_id, t.description, t.created,
